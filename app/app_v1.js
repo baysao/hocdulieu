@@ -1,4 +1,4 @@
-define(["assets/js/core"], function ($core) {
+define([app_asset + "/js/core"], function ($core) {
   if (!webix.env.touch && webix.ui.scrollSize && webix.CustomScroll)
     webix.CustomScroll.init();
 

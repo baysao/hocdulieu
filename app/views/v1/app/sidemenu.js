@@ -1,4 +1,4 @@
-define(["model/side_menu"], function (model_side_menu) {
+define([app_model + "/side_menu"], function (model_side_menu) {
   var scope;
 
   var _menu = {
@@ -17,16 +17,6 @@ define(["model/side_menu"], function (model_side_menu) {
 
   var _layout = {
     rows: [
-      {
-        view: "button",
-        type: "icon",
-        icon: "mdi mdi-plus-circle",
-        label: "Create App",
-          css: "webix_primary",
-	  click: function(){
-	      scope.show("/app/api.create")
-	  }
-      },
       _menu,
     ],
   };

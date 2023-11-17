@@ -1,4 +1,4 @@
-define(["model/menu_profile"], function (model_menu_profile) {
+define([app_model + "/menu_profile"], function (model_menu_profile) {
   var scope;
 
   var _layout = {
@@ -9,7 +9,7 @@ define(["model/menu_profile"], function (model_menu_profile) {
         view: "button",
         type: "image",
         css: "webix_transparent",
-        image: "assets/images/logo/logo.png",
+        image: app_asset + "/images/logo/logo.png",
         width: 80,
       },
       {
@@ -36,11 +36,6 @@ define(["model/menu_profile"], function (model_menu_profile) {
           on: {
             onMenuItemClick(id) {
               if (id === "signout") {
-                webix
-                  .ajax()
-                  .get("/api/app/v1?action=user.signout", function (_res) {
-                    location.hash = "#!/auth/login";
-                  });
               } else scope.show("./settings/$" + id);
             },
           },

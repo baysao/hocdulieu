@@ -2,17 +2,16 @@ define([
 //  "text!/api/app/v1?action=app.config",
   app_view + "/app/toolbar",
   app_view + "/app/sidemenu",
-  "online",
 ], function (
     //$_config,
-	     toolbar, sidemenu, Online) {
+	     toolbar, sidemenu) {
 //  var $config = $_config && JSON.parse($_config);
   var scope;
 
   var _toolbar = toolbar;
-  var _sidemenu = sidemenu;
+    var _sidemenu = sidemenu;
 
-  var _body = {
+    var _body = {
     view: "scrollview",
     scroll: "native-y",
     body: { cols: [{ $subview: true }] },
